@@ -1,0 +1,21 @@
+# Ignore everything in wp-content
+wp-content/*
+
+# Do not ignore the wp-content directory itself
+!wp-content/
+
+# Do not ignore the themes and plugins directories
+!wp-content/themes/
+!wp-content/plugins/
+
+# Ignore everything inside themes and plugins directories
+wp-content/themes/*
+wp-content/plugins/*
+
+# Do not ignore specific themes and plugins (replace 'your-theme' and 'your-plugin' with the actual names)
+!wp-content/themes/lawyerist-wp-child/
+!wp-content/themes/lawyerist-wp-updated/
+!wp-content/plugins/lawyerist-admin-plugin/
+!wp-content/plugins/lawyerist-labster-portal/
+!wp-content/plugins/lawyerist-product-recommendation-wizard/
+!wp-content/plugins/lawyerist-trial-buttons/
