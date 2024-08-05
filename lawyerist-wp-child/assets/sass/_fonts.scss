@@ -1,0 +1,510 @@
+/**
+ * Sass font families.
+ *
+ * @package Postali Child
+ * @author Postali LLC
+ */
+
+ /*------------------------------
+Typography
+------------------------------*/
+
+body {
+	font-family: $sans;
+}
+
+.affinity-partner-discount,
+#article-counter,
+aside blockquote,
+.breadcrumbs,
+.btn,
+button,
+.button,
+.drop_cap,
+.card .headline,
+.card-label,
+.category_list,
+#cancel-comment-reply-link,
+.comment-author,
+.comment-meta,
+.comment .reply,
+#small-firm-dashboard,
+#small-firm-dashboard-container,
+#feature-chart td.value,
+figcaption,
+#footer,
+.section-header,
+#gform_wrapper_60 table.gsurvey-likert td::after,
+#gform_wrapper_61 table.gsurvey-likert td::after,
+.gform_wrapper .gf_progressbar_percentage,
+h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+h5,
+h6,
+#header,
+.headline,
+input[type="button"],
+input[type="submit"],
+label,
+.ld_course_grid,
+.ld-course-step-back,
+.ld-item-list,
+.ld-course-status,
+.ld-lesson-status,
+.ld-topic-status,
+.logged-in-as, /* Logged-in message on comment form. */
+#menu-main-menu,
+nav,
+.onsale,
+#opc-product-selection,
+.page .excerpt,
+.page-template-product-page .excerpt,
+.page_links,
+.postmeta,
+.price_tag,
+.product-filters,
+.product_meta,
+#review,
+  .rating-breakdown,
+  .review-summary-title,
+.sponsored_testimonial_label,
+p.pullout,
+p.pullquote,
+.recommender-result table,
+#scorecard_results #grade_box,
+.scorecard-results-wrapper,
+.tag_list,
+th,
+.title,
+ul.user-list,
+.user-rating,
+p.woocommerce-result-count,
+.woocommerce a.added_to_cart,
+.woocommerce-account .woocommerce-LostPassword,
+.woocommerce-account .woocommerce-MyAccount-navigation,
+.woocommerce nav.woocommerce-pagination,
+.woocommerce-tabs .tabs,
+a.wp-block-button__link,
+a.wp-block-file__button,
+.wp-caption-text,
+.wp-review-feedback {
+  font-family: $sans;
+  font-weight: $medium;
+}
+
+#feature-chart th .message,
+.gform_confirmation_message,
+input[ type="email" ],
+input[ type="password" ],
+input[ type="search" ],
+input[ type="text" ],
+select,
+#small-firm-dashboard p,
+textarea {
+  font-family: $sans;
+  font-weight: $light;
+}
+
+
+code,
+pre {
+  font-family: $sans;
+}
+
+/* Typography */
+body {
+	color: $black;
+  background: $offwhite;
+}
+
+.type-product,
+.page,
+.post,
+.post_body,
+.sidebar,
+.single,
+#footer {
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+p,
+pre,
+ol,
+ul {
+  margin-bottom: 1.5em;
+}
+
+a,
+a:visited {
+	color: $black;
+	text-decoration: underline;
+  font-weight: $bold;
+}
+
+a:hover,
+a:focus {
+	color: $pink;
+	text-decoration: underline;
+  font-weight: $bold;
+}
+
+blockquote,
+.wp-block-quote {
+  border-left: .4rem solid $dkblue;
+  font-family: $courier;
+  clear: both;
+  color: $dkblue;
+  line-height: 1.5;
+  font-size: 2.5rem;
+  font-style: italic;
+  padding: 1rem 3rem;
+  margin: 0 auto 3rem;
+  &.is-style-large {
+    border-left: .4rem solid $dkblue !important;
+    padding: 1rem 3rem;
+    margin: 7rem auto;
+  }
+}
+
+  aside blockquote,
+  p.pullquote {
+    border-left: .4rem solid $dkblue;
+    font-family: $courier;
+    clear: both;
+    color: $dkblue;
+    line-height: 1.5;
+    font-size: 2.5rem;
+    font-style: italic;
+    padding: 1rem 3rem;
+    margin: 0 3rem 3rem;
+  }
+
+  aside blockquote em,
+  p.pullquote em {
+    font-style: italic;
+  }
+
+code {
+	color: $dkgrey;
+  font-size: 1.8rem;
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.drop_cap {
+	float: left;
+	font-size: 4.8rem;
+	font-weight: bold;
+	line-height: 1em;
+	padding-right: .5em;
+}
+
+em,
+i,
+italic,
+italics {
+  font-style: italic;
+}
+
+embed,
+iframe,
+.wistia_responsive_padding {
+  margin-bottom: 3rem !important;
+  max-width: 100%;
+}
+
+p > embed,
+p > iframe {
+  margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+h5,
+h6 {
+	color: $black;
+  font-weight: $bold;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 em,
+h2 em,
+.h2 em,
+h3 em,
+.h3 em,
+h4 em,
+h5 em,
+h6 em {
+	color: $black;
+  font-style: italic;
+  font-weight: $bold;
+  margin-top: 0;
+}
+
+h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+h5 a,
+h6 a {
+	font-weight: inherit;
+}
+
+h1,
+.headline {
+	font-size: 4.2rem;
+	margin-bottom: 5rem;
+}
+
+h2,
+.h2 {
+	font-size: 5.5rem;
+  border-top: $black 4px solid;
+  padding-top: 1.5rem;
+  margin: 8.5rem 0 4rem;
+  @media screen and (max-width: $screen-sm) {
+    font-size: 4rem;
+  }
+}
+
+a .headline,
+a:visited .headline {
+  color: $black;
+  text-decoration: underline;
+  font-weight: $bold;
+}
+
+a:hover .headline,
+a:focus .headline {
+  color: $pink;
+  text-decoration: underline;
+  font-weight: $bold;
+}
+
+h3,
+.h3 {
+	font-size: 2.8rem;
+	margin-bottom: .5em;
+  padding-top: 1.4rem;
+  font-weight: $bold !important;
+}
+
+h4,
+.h4 {
+	font-size: 2rem;
+	margin-bottom: .5em;
+  font-family: $courier;
+  font-weight: $bold !important;
+}
+
+h5 {
+	font-size: 2rem;
+	margin-bottom: .75em;
+}
+
+h6 {
+	font-size: 1.8rem;
+	margin-bottom: .75em;
+}
+
+hr {
+	border: solid $white;
+	border-width: 1px 0 0;
+	clear: both;
+	height: 0;
+	margin: 1rem 0 1em;
+}
+
+p {
+  margin-top: 0;
+}
+
+p:empty {
+  height: 0;
+  margin: 0;
+}
+
+p.note {
+	background-color: $ltgrey;
+  border: .1rem solid $white;
+  border-radius: .2rem;
+  /*box-shadow:
+    .1rem .1rem .3rem rgba(0, 0, 0, 0.2)
+  ;*/
+  margin-left: .1rem;
+  margin-right: .3rem;
+	padding: 2rem;
+}
+// last edit - elizabeth
+p.alert {
+	background-color: $pink;
+  border: .1rem solid $white;
+  border-radius: .2rem;
+  box-shadow:
+    .1rem .1rem .3rem rgba(0, 0, 0, 0.2)
+  ;
+  margin-left: .1rem;
+  margin-right: .3rem;
+	padding: 2rem;
+}
+
+p.pullout {
+  border-radius: 0;
+  box-sizing: border-box;
+  color: $dkgrey;
+  display: inline-block;
+  font-size: 1.8rem;
+  margin: 0 .3rem 1.5rem 1.5rem;
+  padding: 2rem;
+	width: 40%;
+  background: $white;
+  .pullout_label {
+    color: $black;
+		display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+		margin-bottom: .5em;
+	}
+  a {
+    font-family: $courier;
+    color: $black;
+    font-weight: $normal;
+    padding-left: 10px;
+    display: block;
+    &::before {
+      @include pink-arrow;
+      font-size: 12px;
+    }
+  }
+  &.left {
+    float: left;
+		margin: 0 1.5rem 1.5rem 0;
+  }
+  @media only screen and ( max-width: $screen-xxs ) {
+      margin: 0 0 3rem 0;
+    	width: 100%;
+  }
+}
+
+
+
+
+  
+
+.wp-caption-text {
+  color: $dkgrey;
+  font-size: 1.4rem;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.postmeta,
+.product_meta,
+.user-rating,
+.page .excerpt,
+.page-template-product-page .excerpt {
+	color: $dkgrey;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.postmeta {
+  margin-bottom: 4rem;
+}
+
+cite.fn a {
+  color: $black;
+  text-decoration: underline;
+  &:hover {
+    color: $pink;
+  }
+}
+
+  .postmeta cite {
+    font-style: normal;
+  }
+
+  .postmeta .sponsor {
+    color: $pink;
+  }
+
+.product_meta,
+.user-rating {
+  margin-bottom: 1em;
+}
+
+pre {
+	color: $dkgrey;
+	margin-left: 3rem;
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+small {
+	font-size: 80%;
+}
+
+strong,
+b,
+bold {
+	font-weight: bold;
+}
+
+sup {
+	font-size: 75%;
+  font-style: normal;
+  top: 0;
+  vertical-align: super;
+}
+
+ol,
+ul {
+	margin-bottom: 1.5em;
+	margin-left: 3rem;
+  -webkit-margin-before: 0;
+  padding: 0;
+}
+
+li {
+	margin-bottom: 1.4rem;
+  padding: 0;
+}
+
+li:first-child {
+  margin-top: 1.4rem;
+}
+
+  .woocommerce ul.order_details li:first-child {
+    margin-top: unset;
+  }
+
+
+/*-----------------------------------
+Postali Additions
+-----------------------------------*/
+.pink {
+    color: $pink !important;
+}
+
+.courier {
+    font-family: $courier !important;
+}

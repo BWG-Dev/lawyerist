@@ -1,0 +1,23 @@
+/*------------------------------
+Theme Name:   lawyerist-wp-updated
+Theme URI:    https://lawyerist.com
+Description:  A theme for Lawyerist.com
+Author:       Postali LLC
+Version:      5.6.8
+
+License:      Copyright Lawyerist Media, LLC
+------------------------------*/
+
+
+// @import "compass/reset";
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+@import "base";         // renamed & updated
+@import "global";       // updated
+@import "header";       // updated
+@import "footer";       // updated
+@import "page";
+@import "frontpage";
+@import "articles";

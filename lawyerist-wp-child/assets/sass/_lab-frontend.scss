@@ -1,0 +1,455 @@
+/**
+ * Lab styles
+ *
+ * @package lawyerist-wp-child
+ * @author Postali LLC
+ */
+
+.column-holder {
+    background: $white;
+    .lp-upper {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 87%;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 35px 0 60px 0;
+        .lab-portal-top {
+            order: 10;
+            &_container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                @media screen and (max-width: $screen-xs) {
+                    flex-wrap: wrap;
+                }
+                h1 {
+                    flex-basis: 40%;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    @media screen and (max-width: $screen-xs) {
+                        flex-basis: 100%;
+                    }
+                }
+                .progress-holder {
+                    flex-basis: 55%;
+                    @media screen and (max-width: $screen-xs) {
+                        flex-basis: 100%;
+                        margin-top: 30px;
+                    }
+                    &_label {
+                        display: block;
+                        font-family: $courier;
+                        color: $black;
+                        font-size: 1.6rem;
+                    }
+                    &_container {
+                        width: 100%;
+                        background-color: $black;
+                        border-radius: 26px;
+                        padding: 10px;
+                        margin-top: 5px;
+                        .progress-bar {
+                            width: 5%;
+                            height: 30px;
+                            background-color:$pink;
+                            border-radius: 17px;
+                            height: 33px;
+                        }
+                    }
+                }
+            }
+        }
+        .lab-portal-hero {
+            background: $offwhite;
+            border: 1px solid $grey;
+            padding: 40px 0 60px;
+            h2 {
+                font-size: 3.6rem;
+                font-weight: bold;
+            }
+            .dashboard-intro {
+                display: block;
+                padding-bottom: 15px;
+            }
+            .cards-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 15px;
+                row-gap: 15px;
+                margin-top:15px;
+                @media screen and (max-width: $screen-md) {
+                    grid-template-columns: 1fr 1fr;
+                }
+                @media screen and (max-width: $screen-md) {
+                    grid-template-columns: 1fr;
+                }
+                .lp-card {
+                    background: $white;
+                    padding: 30px;
+                    height: 100%;
+                    &.locked {
+                        .title-link {
+                            opacity: 42%;
+                            font-weight: bold;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                            &:before {
+                                color: $black;
+                            }
+                        }
+                        .card-desc {
+                            opacity: 42%;
+                        }
+                    }
+                    &.make-it-blue {
+                        background: $black;
+                        .title-link, .card-desc {
+                            color: $white;
+                        }
+                        .interact-box {
+                            .cta-titles {
+                                .cta-link {
+                                    color: $white;
+                                }
+                            }
+                            .cta-progress {
+                                .three-dots {
+                                    .dot {
+                                        border: 1px solid $white;
+                                    }
+                                }
+                            }
+                            .cta-label {
+                                .label {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                    .title-link {
+                        font-size: 2rem;
+                        font-family: $sans;
+                        color: $black;
+                        display: block;
+                        padding: 10px 0 20px 0;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                        &:before {
+                            @include pink-arrow;
+                            font-size: 16px;
+                            position: relative;
+                            top: 2px;
+                        }
+                    }
+                    .card-desc {
+                        font-size: 1.6rem;
+                        color: $black;
+                        font-family: $courier;
+                        line-height: 1.4;
+                        padding: 20px 0 0;
+                    }
+                    .interact-box {
+                        padding: 30px 0 0; 
+                        display: grid;
+                        grid-template-columns: 40px 1fr 80px;
+                        grid-template-areas: "icons cta progress-meter";
+                        align-items: center;
+                        .cta-icons {
+                            margin: 0 auto;
+                            grid-area: icons;
+                            cursor: pointer;
+                            .icon {
+                                height: 30px;
+                                width: 30px;
+                                background: $pink;
+                                border-radius: 50%;
+                                display: inline-block;
+                                &::before {
+                                    font-family: $icomoon;
+                                    font-size: 16px;
+                                    position: relative;
+                                    left: 6.5px;
+                                    bottom: 1px;
+                                    color: $black;
+                                }
+                                &.step-one {
+                                    background: $pink;
+                                    &::before {
+                                        content: '\e910';
+                                        color: $white;
+                                        left: 7px;
+                                    }
+                                }
+                                &.step-two {
+                                    background: $yellow;
+                                    &::before {
+                                        content: '\e90f';
+                                        font-size: 17px;
+                                        bottom: .5px;
+                                    }
+                                }
+                                &.step-three {
+                                    background: $green;
+                                    &::before {
+                                        content: '\e911';
+                                    }
+                                }
+                            }
+                        }
+                        .cta-titles {
+                            cursor: pointer;
+                            grid-area: cta;
+                            .cta-link {
+                                display: block;
+                                padding-left: 5px;
+                                font-size: 1.4rem;
+                                font-weight: bold;
+                                font-family: $courier;
+                                text-decoration: none; 
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                                &.step-two {
+                                    &:hover {
+                                        text-decoration: none;
+                                        cursor: revert;
+                                    }
+                                }
+                                &.hide {
+                                    display: none;
+                                }
+                                &.restart-step-one {
+                                    display: block;
+                                    font-family: $courier;
+                                    font-size: 1.2rem;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                        .cta-progress {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            grid-area: progress-meter;
+                            .three-dots {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                padding: 5px 0;
+                                .dot {
+                                    height: 10px;
+                                    width: 10px;
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                    border: 1px solid $black;
+                                    margin: 0 3px; 
+                                    &.step-one.current {
+                                        background: $pink;
+                                    }
+                                    &.step-two.current {
+                                        background: $yellow;
+                                    }
+                                    &.step-three.current {
+                                        background: $green;
+                                    }
+                                }
+                            }
+                            .cta-label {
+                                margin: 0 auto;
+                                .label {
+                                    display: block;
+                                    text-align: center;
+                                    font-family: $courier;
+                                    font-size: 1.2rem;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                    .cta-form {
+                        .gform_title {
+                            display: none;
+                        }
+                        .gform_body {
+                            li {
+                                input {
+                                    display: block;
+                                    width: 100%;
+                                }
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+                        &.hidden-form {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .accordions {  
+                &_title  {
+                    border-top: $black 4px solid;
+                    padding:11px 0;
+                    cursor:pointer;
+                    margin-top:10px;
+                    transition:$trans;
+                    &_cta {
+                        display: grid;
+                        grid-template-areas: "heart title plus";
+                        grid-template-columns: 50px 1fr 20px;
+                        align-items: center;
+                        .heart-container {
+                            align-self:center;
+                            justify-self:start;
+                            display: block;
+                            line-height: 1;
+                            height: 40px;
+                            padding-top: 3px;
+                            grid-area: heart;
+                            .heart {
+                                height: 40px;
+                                svg.radial-progress {
+                                    height: auto;
+                                    max-width: 40px;
+                                    transform: rotate(-90deg);
+                                    width: 100%;
+                                    circle {
+                                        fill: none;
+                                        stroke-dashoffset: 219.91148575129; 
+                                        stroke-width: 9;
+                                        &.incomplete { 
+                                            stroke: $black; 
+                                        }
+                                        &.complete {
+                                            stroke-dasharray: 219.91148575129;
+                                            stroke: $pink;
+                                            opacity: 0;
+                                            /*&:first-of-type {
+                                                stroke-dashoffset: 0 !important;
+                                                opacity: 1;
+                                            }
+                                            &:nth-of-type(2) {
+                                                stroke-dashoffset: 175.584067 !important;
+                                                opacity: 1;
+                                            }*/
+                                        }
+                                    }
+                                }
+                            }
+                            .counter {
+                                font-family: $courier;
+                                font-size: 1.1rem;
+                                color: $black;
+                                font-weight: bold;  
+                                position: relative;
+                                top: -25.5px;
+                                display: block;
+                                margin: 0 auto;
+                                width: fit-content;
+                                &::before {
+                                    content: '0%' !important;
+                                }
+                                /*&:first-of-type {
+                                    &::before {
+                                        content: '100%' !important;
+                                    }
+                                }
+                                &:nth-of-type(2) {
+                                    &::before {
+                                        content: '20%' !important;
+                                    }
+                                }*/
+                            }
+                        }
+                            h2 {
+                                grid-area: title;
+                                border-top: none !important;
+                                font-size: 4rem;
+                                padding: 0;
+                                margin: 0;
+                                display: block;
+                                line-height: 1;
+                                @media screen and (max-width: $screen-xs) {
+                                    font-size: 3rem;
+                                }
+                            }
+                            .plus {
+                                align-self:center;
+                                justify-self:end;
+                                display: block;
+                                margin: 0;
+                                grid-area: plus;
+                                &::after {
+                                    content: '\e901';
+                                    font-family: $icomoon;
+                                    display: inline-block;
+                                    transition:$trans;
+                                    font-size:22px;
+                                    position: relative;
+                                    color: $pink;
+                                    margin-top: 5px;
+                                }
+                                &:hover {
+                                    &::after {
+                                        color: $dkblue;
+                                    }
+                                }
+                            }    
+                        }
+                        &_desc {
+                            font-family: $courier;
+                            font-size: 1.6rem;
+                            font-weight: $light;
+                        }
+                        &.active {
+                            .plus {
+                                &:after {
+                                    -webkit-transform: rotate(135deg);
+                                    transform: rotate(135deg);
+                                }
+                            }
+                            .accordions_title_desc {
+                                font-weight: $normal;
+                            }
+                        }
+                }
+                &_content {
+                    display: none;
+                    padding-bottom: 3rem;
+                    ul {
+                        margin: 0;
+                        li {
+                            @include arrow-list;
+                            background: none;
+                            text-indent: 0;
+                            font-size: 1.5rem;
+                            padding: 7px 0;
+                            a {
+                                color: $black !important;
+                                font-weight: $light;
+                                text-decoration: none;
+                                &:hover {
+                                    font-weight: $normal;
+                                    text-decoration: underline;
+                                }
+                            }
+                            &::before {
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+                        

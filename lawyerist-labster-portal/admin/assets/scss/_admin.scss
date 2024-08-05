@@ -1,0 +1,127 @@
+h1 {
+    padding: 5px 0 20px;
+}
+.admin-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    margin-top:15px;
+    @media screen and (max-width: $screen-md) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: $screen-md) {
+        grid-template-columns: 1fr;
+    }
+    .admin-card {
+        background: $white;
+        padding: 15px;
+        .title-link {
+            font-size: 18px;
+            color: $black;
+            display: block;
+            padding: 10px 0 20px 0;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+            &:before {
+                @include pink-arrow;
+                font-size: 12px;
+                position: relative;
+                top: 2px;
+            }
+        }
+        .interact-box {
+            display: block !important;
+            &.hidden {
+                display: none !important;
+            }
+            .cta-progress {
+                display: block;
+                padding: 5px 0;
+                    #update-status {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr 1fr;
+                        row-gap: 5px;
+                        align-items: center;
+                        input {
+                            display: block;
+                            position: relative;
+                            right: 10px;
+                            margin: 0 0 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+.accordions { 
+    width: 98%;
+    &:first-of-type {
+        display: none;
+    } 
+    &_title  {
+        border-top: $black 4px solid;
+        padding: 8px 0;
+        cursor:pointer;
+        margin: 0;
+        transition:$trans;
+        &_cta {
+            display: grid;
+            grid-template-areas: "title plus";
+            grid-template-columns: 1fr 20px;
+            align-items: center;
+            h2 {
+                grid-area: title;
+                border-top: none !important;
+                font-size: 18px;
+                padding: 0;
+                margin: 5px 0 0;
+                display: block;
+                line-height: 1;
+                @media screen and (max-width: $screen-xs) {
+                    font-size: 20px;
+                }
+            }
+            .plus {
+                align-self:center;
+                justify-self:end;
+                display: block;
+                margin: 0;
+                grid-area: plus;
+                &::after {
+                    content: '\e901';
+                    font-family: $icomoon;
+                    display: inline-block;
+                    transition:$trans;
+                    font-size: 18px;
+                    position: relative;
+                    color: $pink;
+                    margin-top: 5px;
+                }
+                &:hover {
+                    &::after {
+                        color: $dkblue;
+                    }
+                }
+            }    
+            &.active {
+                .plus {
+                    &:after {
+                        -webkit-transform: rotate(135deg);
+                        transform: rotate(135deg);
+                    }
+                }
+                .accordions_title_desc {
+                    font-weight: $normal;
+                }
+            }
+        }
+    }
+    &_content {
+        display: none;
+        padding-bottom: 3rem;
+    }
+} 

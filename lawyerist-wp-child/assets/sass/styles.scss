@@ -1,0 +1,26 @@
+/*------------------------------
+Theme Name:   lawyerist-wp-child
+Theme URI:    https://dashboard.lawyerist.com
+Description:  A theme for dashboard.lawyerist.com
+Author:       Sam Glover – Updated by Postali
+Version:      5.6.8
+
+License:      Copyright Lawyerist Media, LLC
+------------------------------*/
+
+
+@import "compass/reset";
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+
+@import "lawyerist";
+@import "global";
+@import "header";
+@import "footer";
+@import "postali-base";
+@import "frontpage";
+@import "lab-mixins";
+@import "lab-frontend";
+@import "store";

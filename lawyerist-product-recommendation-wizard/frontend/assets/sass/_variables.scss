@@ -1,0 +1,66 @@
+/**
+ * Sass variables and functions.
+ *
+ * @package lawyerist-wp
+ * @author Postali LLC
+ */
+
+// Breakpoints
+$screen-xxl: 1660px;
+$screen-xl: 1400px;
+$screen-lg: 1200px;
+$screen-mdlg: 1024px;
+$screen-md: 992px;
+$screen-smmd: 860px;
+$screen-sm: 768px;
+$screen-xs: 667px;
+$screen-xxs: 480px;
+$screen-xxxs: 360px;
+$screen-4xs: 330px;
+
+// Containers
+$container-max-width: $screen-xxl;
+$container-padding:30px;
+
+// Transitions
+$transition-speed:.3s;
+$transition-fast:.3s ease-in-ease-out;
+$transition-slow:.5s ease-in-ease-out;
+
+// Core Colors
+$white: #FFFFFF;
+$offwhite: #F6F6F6;
+$ltgrey: #D9D9D9;
+$dkgrey: #52616A;
+$black: #424B54;
+$pink: #ff7062;
+$blue: #81A2AA;
+$dkblue: #88a2aa;
+$medgrey: #e5e5e5;
+
+
+// Link Attributes
+// $link-color: $lt-red;
+// $link-hover-color: $grey;
+$link-transition-speed: .15s;
+$trans: 0.3s linear;
+
+// Typography
+//$FONTFAMILY: 'FONTFAMILY', sans-serif;
+$icomoon: 'Icomoon';
+$courier: 'courier-prime', monospace;
+$sans: 'sweet-sans-pro', sans-serif;
+
+
+// $body-font-family: $overpass;
+// $body-text-color: $dk-blue;
+$body-line-height: 130%;
+
+// Font Weight
+$hairline: 200;
+$thin: 300;
+$light: 500;
+$normal: 600;
+$medium: 700;
+$bold: 800;
+$heavy: 900;

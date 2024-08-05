@@ -1,0 +1,1220 @@
+/**
+ * Converted to SCSS partial from original Lawyerist style.css file
+ *
+ * @package Postali Child
+ * @author Postali LLC
+ */
+
+
+/*------------------------------
+Index
+
+Layout & Design Elements
+Block Styles
+Signup Wall
+Images
+Expander
+Card Styles
+Scorecard Dashboard
+Content
+  Scorecard Results
+  Tables
+  Product Pages
+  All-Reviews Page
+  Team Profiles
+  Full Width Template
+	Comments
+  In-Page Partner Ad
+Author Bios
+Platinum Sponsors Widget
+Forms
+	Buttons
+  Gravity Forms Customizations
+
+------------------------------*/
+
+/*------------------------------
+Layout & Design Elements
+------------------------------*/
+html {
+	font-size: 62.5%; /* 10px */
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden !important;
+  background-color: $offwhite;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+  width: 100%;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.dismissible-notice,
+.card.dismissible-notice {
+  display: none;
+}
+
+.hidden {
+  position: absolute;
+    left: -10000px;
+    top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.remove_bottom {
+	margin-bottom: 0 !important;
+}
+
+.separator_3rem {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.separator_6rem {
+  margin-bottom: 6rem;
+  width: 100%;
+}
+
+.text_right {
+    text-align: right;
+}
+
+
+/*------------------------------
+Block Styles
+------------------------------*/
+
+.wp-block-embed {
+	margin: 0 0 3rem 0;
+}
+.ld-video {
+	margin-bottom: 3rem;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+.wp-block-embed.is-type-video {
+	>.wp-block-embed__wrapper {
+		margin-bottom: 3rem;
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 25px;
+		height: 0;
+	}
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+.wp-block-video {
+	video {
+		width: 100%;
+	}
+}
+
+/*------------------------------
+Signup Wall
+------------------------------*/
+
+#article-counter-container {
+  background: $ltgrey;
+  box-shadow: 0 -.2rem .3rem rgba( 0, 0, 0, 0.2 );
+  display: grid;
+  grid-template-areas: 'lbuffer center rbuffer';
+  grid-template-columns: minmax( 2rem, 1fr ) minmax( 28rem, 102.4rem ) minmax( 2rem, 1fr);
+  position: fixed;
+    bottom: 0;
+    left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#article-counter {
+  font-size: 1.6rem;
+  grid-area: center;
+  padding: 2rem 0;
+}
+
+.article-counter-login-notice {
+  font-size: 18px;
+  margin: 15px auto 0;
+  width: 90%;
+}
+
+
+/*------------------------------
+Images
+------------------------------*/
+
+img {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+  padding: 0;
+}
+
+img.alignone,
+.wp-block-image .alignone {
+  clear: both;
+  display: block;
+}
+
+img.aligncenter {
+	clear: both;
+	display: block !important;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+img.alignleft {
+  margin: 0 0 3rem 0;
+	padding-right: 1.5rem;
+}
+
+img.alignright {
+  margin: 0 0 3rem 0;
+	padding-left: 1.5rem;
+}
+
+img.size-full {
+  max-width: 100%;
+}
+
+img.size-large {
+  max-width: 100%;
+  width: 100%;
+}
+
+img.size-thumbnail {
+  width: 15rem;
+}
+
+  /* 2x the max width of the image (300px), plus 2x the image padding (330px),
+  plus 2x the #content_column padding (350px). */
+  @media only screen and (max-width: $screen-xxxs) {
+
+    img.size-thumbnail {
+      clear: both;
+    	display: block;
+      float: none;
+    	margin-left: auto;
+      margin-right: auto;
+      max-width: none;
+    }
+
+  }
+
+img.avatar {
+	border-radius: 50%;
+  box-shadow: 0.1rem 0.1rem 0.3rem rgba( 0, 0, 0, 0.2 );
+}
+
+img.inline {
+  display: inline !important;
+}
+
+.page #featured-image,
+.single #featured-image {
+  margin-bottom: 3rem;
+}
+
+#contributors-list {
+  display: grid;
+  grid-template-columns: repeat( 4, 1fr );
+  grid-gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+  #contributors-list .contributor {
+    text-align: center;
+  }
+
+/* Fix block gallery margins */
+.wp-block-gallery {
+  margin: 0 0 3rem 0;
+}
+
+li.blocks-gallery-item {
+  &::before {
+    display: none;
+  }
+}
+
+.wp-block-gallery .blocks-gallery-image,
+.wp-block-gallery .blocks-gallery-item {
+  flex-grow: unset;
+}
+
+/* Fix for overflowing image captions in block galleries. */
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+  box-sizing: border-box;
+  text-align: right !important;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption a,
+.wp-block-gallery .blocks-gallery-item figcaption a {
+  color: inherit;
+}
+
+/*------------------------------
+Expander
+------------------------------*/
+
+.card .expandthis-click {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+  &::after {
+    content: '\e90f';
+    display: inline-block;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: $icomoon;
+    speak: none;
+    text-align: center;
+    vertical-align: top;
+    width: 1.2em;
+    font-size: 12px !important;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    transition: $trans;
+  }
+  &.open {
+    &::after {
+      transform: rotate(180deg);
+      top: 2px;
+    }
+  }
+}
+
+.card .button.expandthis-click::after,
+.card button.expandthis-click::after {
+  display: none;
+}
+
+.card .button.expandthis-click.open,
+.card button.expandthis-click.open {
+  background: $white;
+}
+
+.card .expandthis-click:nth-last-child(2) {
+  margin-bottom: 0 !important;
+}
+
+.expandthis-hide {
+  margin-top: .5em;
+}
+
+/*------------------------------
+Card Styles
+------------------------------*/
+
+.card {
+  background-color: $white;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+  text-decoration: none;
+  a.has-post-thumbnail {
+    grid-template-columns: 60% 1fr !important;
+    text-decoration: none !important;
+    &:hover {
+      color: $white !important;
+    }
+    .post-card-img {
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media screen and (max-width: $screen-md) {
+        height: 250px;
+      }
+      @media screen and (max-width: $screen-sm) {
+        height: 200px;
+      }
+      @media screen and (max-width: $screen-xs) {
+        height: 250px;
+      }
+      &.updated {
+        @include new-banner;
+        margin-top: 0;
+        margin-bottom: 0;
+        .h1-banner_overlay {
+          width: 100%;
+          .h1-container {
+            width: 90%;
+            .circle-logo {
+              #logo-svg {
+                width: 60px;
+                margin: 5px 0 15px 0;
+              }
+            }
+            span.new-h1 {
+              color: $white !important;
+              text-decoration: none !important;
+              font-size: 4rem;
+              line-height: 3.8rem;
+              &:hover {
+                color: $white !important;
+                text-decoration: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .headline-byline {
+      .headline {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/*------------------------------
+Small Firm Dashboard
+------------------------------*/
+
+#small-firm-dashboard-container {
+  background-color: $offwhite;
+  border-radius: 0;
+  box-sizing: border-box;
+  margin: 45px auto 0;
+  max-width: 102.4rem;
+  min-width: 32rem;
+  padding: 0 1rem;
+}
+
+#small-firm-dashboard {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+#dashboard-title {
+  color: $black;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+#small-firm-dashboard .logout-link {
+  float: right;
+  font-size: 80%;
+}
+
+p.dashboard-widget-note {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 1.5em;
+}
+
+/*------------------------------
+Content
+------------------------------*/
+
+
+    /*------------------------------
+    Scorecard Results
+    ------------------------------*/
+
+    #dashboard-scorecard-widget {
+      p.remove_bottom {
+        text-align: left !important;
+        a.button {
+          padding: .5rem 1.5rem !important;
+          font-size: 1.6rem !important;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    #scorecard_results {
+      background-color: $offwhite;
+      border: .1rem solid $white;
+      border-radius: .2rem;
+      box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.2);
+      margin: 0 .3rem 3rem .1rem;
+      padding: 2rem 4rem;
+      position: relative;
+    }
+
+    #scorecard_results #grade_box {
+      box-sizing: border-box;
+      float: left;
+      padding-right: 2rem;
+      width: 15rem;
+    }
+
+
+      #scorecard_results .grade_label {
+        color: $dkgrey;
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: .75rem;
+        text-transform: uppercase;
+      }
+
+      #scorecard_results .grade {
+        font-size: 14.4rem;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+      }
+
+      #scorecard_results .score {
+        text-align: center;
+      }
+
+    #scorecard_results #get_results {
+    }
+
+      #scorecard_results #get_results .button {
+        height: 3.6rem;
+        position: absolute;
+          right: 4rem;
+          top: 50%;
+        margin-top: -1.8rem;
+      }
+
+      #scorecard_results #get_results p {
+        display: block;
+        font-size: 1.6rem;
+        padding-left: 17rem;
+      }
+
+    @media only screen and ( max-width: $screen-xxs ) {
+
+      #scorecard_results {
+        padding: 2rem;
+      }
+
+      #scorecard_results #get_results .button {
+        right: 2rem;
+      }
+
+    }
+
+
+    /*------------------------------
+    Tables
+    ------------------------------*/
+
+    table {
+      margin-bottom: 3rem;
+    }
+
+    td,
+    th {
+      border: 1px solid $white;
+      padding: .75rem 1.5rem;
+    }
+
+    th {
+      background-color: $ltgrey;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .tablepress {
+      font-size: 80%;
+    }
+
+      .tablepress td,
+      .tablepress th,
+      .tablepress thead th {
+        min-width: 9rem;
+        vertical-align: top;
+      }
+
+
+      /* LPMS Individual Landing Pages */
+
+      .lpms-features-table .column-1 {
+        background-color: $white;
+        border-right: .1rem solid $white;
+      }
+
+      .lpms-features-table tr th {
+        min-width: 16rem;
+      }
+
+
+      /* Lab Curriculum Table */
+
+      .lab-curriculum .column-1 {
+        font-family: $sans;
+        font-weight: bold;
+        padding-left: 0;
+      }
+
+      .lab-curriculum ul br {
+        display: none;
+      }
+
+      .lab-curriculum li:first-child {
+        margin-top: 0;
+      }
+
+      /* Memberships Pricing Chart */
+
+      .memberships-pricing-chart {
+        margin-bottom: 4rem;
+      }
+
+      .memberships-pricing-chart td {
+        line-height: 1.2;
+      }
+
+
+      /* Borders & Background Colors */
+
+      .memberships-pricing-chart tbody tr td,
+      .tablepress.memberships-pricing-chart tbody tr:first-child td {
+        border-left: .1rem solid $white;
+        border-top: .1rem solid $white;
+      }
+
+      .memberships-pricing-chart tbody tr td:last-child {
+        border-right: .1rem solid $white;
+      }
+
+      .memberships-pricing-chart tbody tr:last-child td {
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .memberships-pricing-chart .column-1 {
+        background-color: $offwhite;
+      }
+
+      .memberships-pricing-chart .row-1 .column-1,
+      .tablepress.memberships-pricing-chart tbody tr:first-child .column-1,
+      .memberships-pricing-chart .row-2 .column-1 {
+        background-color: unset;
+        border-top: 0;
+        border-left: 0;
+      }
+
+      .memberships-pricing-chart .row-15 .column-1 {
+        background-color: unset;
+      }
+
+      .memberships-pricing-chart .row-1 .column-2,
+      .memberships-pricing-chart .row-1 .column-3,
+      .memberships-pricing-chart .row-1 .column-4 {
+        background-color: $offwhite;
+      }
+
+      .memberships-pricing-chart .row-2 .column-2,
+      .memberships-pricing-chart .row-2 .column-3,
+      .memberships-pricing-chart .row-2 .column-4 {
+        background-color: $offwhite;
+        border-top: 0;
+      }
+
+      .memberships-pricing-chart .row-15 .column-1 {
+        border-left: 0;
+        border-bottom: 0;
+      }
+
+
+      /* Rows */
+
+      .memberships-pricing-chart .row-1 {
+        color: $black;
+        font-family: $sans;
+        font-size: 2.8rem;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: .5em;
+      }
+
+      /* Columns */
+
+      .memberships-pricing-chart .column-1 {
+        font-family: $sans;
+        width: 15%;
+      }
+
+      .memberships-pricing-chart .column-2,
+      .memberships-pricing-chart .column-3,
+      .memberships-pricing-chart .column-4 {
+        text-align: center;
+        width: 21.25%;
+      }
+
+      /* Cells */
+
+      .memberships-pricing-chart .row-1 td,
+      .memberships-pricing-chart .row-2 td {
+        text-align: left;
+      }
+
+      .memberships-pricing-chart .row-15 td .button {
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+
+    /*------------------------------
+    Comments
+    ------------------------------*/
+
+    ol.commentlist,
+    ul.children {
+      list-style: none;
+    }
+
+    ul.children {
+      border-left: .3rem solid $white;
+      margin-left: 0;
+      padding-left: 2rem;
+    }
+
+    .commentlist {
+      margin: 0 0 3rem 0;
+    }
+
+    .comment-body {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .comment-body blockquote {
+      background-color: $ltgrey;
+      color: $black ;
+      font-size: 2rem;
+      margin-bottom: 1.8rem;
+      padding: 1.8rem;
+    }
+
+      .comment-body blockquote > p:last-of-type {
+        margin-bottom: 0;
+      }
+        .comment-author .avatar {
+          border: .1rem solid $dkgrey;
+          box-shadow: 0.1rem 0.1rem 0.3rem rgba( 0, 0, 0, 0.2 );
+          float: left;
+          margin: 0 1rem 1rem 0;
+        }
+
+        .comment-author cite {
+          font-style: normal;
+        }
+
+      .comment-meta {
+        font-size: 1.4rem;
+        margin-bottom: 1em;
+      }
+
+        .comment-meta a {
+          color: $dkgrey;
+        }
+
+      .comment-body > p:last-of-type {
+        margin-bottom: .75rem;
+      }
+
+    .comment .reply {
+      font-size: 1.6rem;
+    }
+      #respond {
+        background-color: $offwhite;
+        border: .1rem solid $white;
+        border-radius: .2rem;
+        box-shadow:
+          .1rem .1rem .3rem rgba(0, 0, 0, 0.2)
+        ;
+        display: block;
+        margin: 0 .3rem 3rem .1rem !important;
+        padding: 2rem;
+      }
+
+      #cancel-comment-reply-link {
+        color: $dkgrey;
+        display: block;
+        font-size: 1.2rem;
+        font-weight: normal;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+
+      #commentform p {
+        margin-bottom: .75rem;
+      }
+
+      #commentform p.logged-in-as {
+        font-size: 1.4rem;
+        margin-bottom: 1em;
+      }
+
+      .comment-notes {
+        font-size: 1.4rem;
+      }
+
+      .comment-form-comment {
+        margin-bottom: .6rem;
+      }
+
+      textarea#comment {
+        width: 100%;
+      }
+
+      #commentform .comment-form-email {
+        margin-bottom: 1em;
+      }
+
+      .comment-form-url {
+        display: none;
+      }
+
+      #commentform input#submit {
+        margin-bottom: 0;
+      }
+
+  /*------------------------------
+  Forms
+  ------------------------------*/
+
+  input,
+  select,
+  textarea {
+    background-color: $white;
+    border: .1rem solid $ltgrey;
+    box-sizing: border-box;
+    font-size: inherit;
+    line-height: inherit;
+    outline: none;
+  }
+
+    input[ type="email" ],
+    input[ type="password" ],
+    input[ type="search" ],
+    input[ type="text" ],
+    select,
+    textarea {
+      border-radius: .2rem;
+      padding: .5rem .4rem;
+      width: calc( 50% - 8px );
+      -webkit-appearance: none;
+    }
+
+    .search-form {
+      display: grid;
+      grid-column-gap: 1rem;
+      grid-template-areas: 'search-field search-button';
+      grid-template-columns: 1fr 8rem;
+      margin-bottom: 3rem;
+    }
+
+      .search-form label,
+      .search-form #search-input-container {
+        grid-area: search-field;
+      }
+
+      .search-form input[ type="search" ] {
+        box-sizing: border-box;
+        font-size: 2rem;
+        line-height: 1.5;
+        width: 100%;
+      }
+
+      .search-form input[ type="submit" ] {
+        align-self: center;
+        grid-area: search-button;
+        margin: 0;
+      }
+
+    input[ type="checkbox" ],
+    input[ type="radio" ] {
+      /* Just a placeholder. */
+    }
+
+    input:focus
+    select:focus,
+    textarea:focus {
+      border-color: $pink;
+      color: $black;
+    }
+
+  label {
+    display: block;
+  }
+
+  select {
+    background-image: url( 'images/expand-bbb.svg' );
+    background-position: right .4rem top 50%, 0 0;
+    background-repeat: no-repeat;
+    padding: .5rem 2.4rem .5rem .4rem !important;
+    position: relative;
+    -webkit-appearance: none;
+  }
+
+    .ui-datepicker-title select {
+      color: $dkgrey;
+      font-family: $sans !important;
+      width: unset;
+    }
+
+    select:hover {
+      background-image: url( 'images/expand.svg' );
+      cursor: pointer;
+    }
+
+  @media only screen and ( max-width: $screen-xs ) {
+
+    input[ type="email" ],
+    input[ type="password" ],
+    input[ type="search" ],
+    input[ type="text" ],
+    select,
+    textarea {
+      width: 100%;
+    }
+
+    .gform_wrapper input:not( [ type = radio ] ):not( [ type = checkbox ] ):not( [ type = image ] ):not( [ type = file ] ) {
+      line-height: unset !important;
+      min-height: unset !important;
+    }
+
+  }
+
+
+  /*------------------------------
+  Buttons
+  ------------------------------*/
+
+  // wraps buttons t/o site
+  center {
+    text-align: left;
+  }
+
+  button,
+  .button,
+  a.button,
+  input.button,
+  input[type="button"],
+  input[type="submit"],
+  a.review-btn,
+  #commentform.wp-review-comment-form input[type="submit"],
+  .wp-block-button a.wp-block-button__link,
+  .wp-block-file a.wp-block-file__button,
+  //.cta_button,
+  a.button.really-big-button,
+  .really-big-button a.wp-block-button__link  {
+    @include basic-button;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 1.4rem !important;
+    font-weight: $light;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    width: auto;
+    cursor: pointer;
+  }
+  a.button.really-big-button,
+  .really-big-button {
+    font-size: 2rem !important;
+    min-width: 250px;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 0 0 2.5rem 0;
+    @media screen and (max-width: $screen-sm) {
+      font-size: 1.6rem !important;
+      min-width: revert;
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+    }
+  }
+
+    .ld_course_grid .ld_course_grid_button a.btn {
+      display: block;
+      margin: 0;
+    }
+
+    a.button.big-button {
+      margin: 0 auto 3rem 0;
+    }
+
+    .wp-block-file a.wp-block-file__button {
+      background-color: $pink;
+      border-radius: 1.4rem;
+      display: unset;
+      font-size: 1.3rem !important;
+      padding: .5em 1em;
+      text-transform: uppercase;
+    }
+
+  button:focus,
+  .button:focus,
+  a.button:focus,
+  input.button:focus,
+  input[type="button"]:focus,
+  input[type="submit"]:focus,
+  a.review-btn:focus,
+  #commentform.wp-review-comment-form input[type="submit"]:focus,
+  .wp-block-button a.wp-block-button__link:focus,
+  .wp-block-file a.wp-block-file__button:focus {
+    box-shadow: none;
+    color: $white;
+    outline: none !important;
+  }
+
+  /*button:hover,
+  .button:hover,
+  a.button:hover,
+  input.button:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:hover,
+  a.review-btn:hover,
+  #commentform.wp-review-comment-form input[type="submit"]:hover,
+  .wp-block-button a.wp-block-button__link:hover,
+  .wp-block-file a.wp-block-file__button:hover {
+    background-color: $pink;
+    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.4);
+    color: $white;
+    text-decoration: none;
+  }*/
+
+  /*button:active,
+  .button:active,
+  a.button:active,
+  input.button:active,
+  input[type="button"]:active,
+  input[type="submit"]:active,
+  a.review-btn:active,
+  #commentform.wp-review-comment-form input[type="submit"]:active,
+  .wp-block-button a.wp-block-button__link:active,
+  .wp-block-file a.wp-block-file__button:active {
+    background-color: $pink;
+    box-shadow: none;
+    color: $white;
+  }*/
+
+  .wp-block-button a.wp-block-button__link {
+    margin: 0;
+  }
+
+  button.dismiss-button {
+    border-radius: 50%;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0;
+    padding: 0;
+    width: 3rem;
+  }
+
+    button.dismiss-button::before {
+      content: '\f405';
+      display: inline-block;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font: normal 3rem/1 Genericons;
+      position: relative;
+        left: -.03em;
+        bottom: -.04em;
+      speak: none;
+      vertical-align: top;
+    }
+
+  /*button.graybutton,
+  button.greybutton,
+  a.graybutton,
+  a.greybutton {
+    height: max-content;
+    padding: 15px 55px 15px 60px;
+    font-family: $courier;
+    font-size: 17px !important;
+    line-height: 18px;
+    text-transform: none;
+    text-decoration: none;
+    color: $black !important;
+    border-radius: 0;
+    border: $black 1px solid;
+    transition: $trans;
+    background: $offwhite !important;
+    &::before {
+      @include pink-arrow;
+      font-size: 13px;
+      margin-right: 0px;
+      position: relative;
+      top: 1px;
+      left: -40%;
+    }
+    &:hover {
+      box-shadow: none;
+      cursor: pointer;
+      background: $white !important;
+
+    }
+  }
+
+  button.graybutton:hover,
+  button.greybutton:hover,
+  a.graybutton:hover,
+  a.greybutton:hover {
+    background-color: $white;
+    color: $white;
+  }
+
+  button.graybutton:active,
+  button.greybutton:active,
+  a.graybutton:active,
+  a.greybutton:active {
+    background-color: $ltgrey;
+    color: $offwhite;
+  }*/
+
+  .dismiss-button {
+    position: absolute;
+      top: 2rem;
+      right: 2rem;
+  }
+
+
+  @media only screen and ( max-width: $screen-xs ) {
+
+    button,
+    .button,
+    a.button,
+    input.button,
+    input[type="button"],
+    input[type="submit"] {
+      width: 100%;
+    }
+
+  }
+
+
+    /*------------------------------
+    Gravity Forms Customizations
+    ------------------------------*/
+
+    .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+    .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
+    .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+      margin-right: .4rem;
+      margin-top: unset !important;
+      vertical-align: unset !important;
+    }
+
+    .gform_wrapper.gravity-theme .gfield input.large, 
+    .gform_wrapper.gravity-theme .gfield select.large {
+      color: $dkgrey;
+    }
+
+    .gform_wrapper.gravity-theme .gfield-choice-input+label {
+      font-weight: 400;
+    }
+
+    .gform_wrapper .gfield_checkbox li label {
+      line-height: 1.2;
+    }
+
+    .gform_wrapper {
+      .gform_body {
+        li {
+          text-indent: 0 !important;
+        }
+        .gfield_required {
+          color: $pink;
+        }
+      }
+    }
+
+    /* Small Firm Scorecard */
+    #gform_wrapper_60 .gfield_label,
+    #gform_wrapper_61 .gfield_label {
+      font-family: $sans;
+      font-weight: normal;
+    }
+
+    #gform_wrapper_60 .gfield_required,
+    #gform_wrapper_61 .gfield_required {
+      display: none;
+    }
+
+    #gform_wrapper_60 .gform_button,
+    #gform_wrapper_61 .gform_button {
+      width: 160px;
+      font-size: 1.8rem !important;
+      padding: .5rem 1.5rem;
+    }
+
+    @media only screen and ( max-width: $screen-sm ), ( max-device-width: $screen-mdlg ) and ( min-device-width: $screen-sm ) {
+
+      #gform_wrapper_60 table.gsurvey-likert tr,
+      #gform_wrapper_61 table.gsurvey-likert tr {
+        display: grid;
+        grid-template-columns: repeat( 11, 1fr );
+      }
+
+        #gform_wrapper_60 table.gsurvey-likert td,
+        #gform_wrapper_61 table.gsurvey-likert td {
+          background-position: bottom 6px center !important;
+          min-height: 55px;
+          padding: 0;
+        }
+
+        #gform_wrapper_60 table.gsurvey-likert td::after,
+        #gform_wrapper_61 table.gsurvey-likert td::after {
+          background-color: $ltgrey;
+          border-bottom: 1px solid $ltgrey;
+          display: block;
+          font-size: 1.6rem;
+          font-weight: normal;
+          line-height: 13px;
+          margin: 0 0 29px 0;
+          padding: 6px;
+          text-align: center;
+        }
+
+    }
+
+    body img.gform_ajax_spinner {
+    display: none !important;
+    }

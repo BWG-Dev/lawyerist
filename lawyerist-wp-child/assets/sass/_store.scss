@@ -1,0 +1,151 @@
+/**
+ * Woocommerce Store Styles
+ *
+ * @package lawyerist-wp-child
+ * @author Postali LLC
+ */
+
+.woocommerce-product-gallery {
+    opacity: 1 !important;
+}
+
+.woocommerce-account {
+    #column_container {
+        max-width: 80%;
+        @media screen and (max-width: $screen-sm) {
+            max-width: 90%;
+        }
+    }
+}
+
+.products { // product grid
+    .product {
+        text-indent: 0 !important;
+        margin-top: 15px !important;
+        &:first-child {
+            margin-top: 15px !important;
+        }
+        &::before {
+            display: none!important;
+        }
+        .wc-block-components-product-image,
+        .wc-block-components-product-title, 
+        .wc-block-components-product-price,
+        .wc-block-components-product-button {
+            width: 95%;
+            margin: 0 auto;
+            background: white;
+            border-left: 1px solid #CBCBCB;
+            border-right: 1px solid #CBCBCB;
+        }
+        .wc-block-components-product-image {
+            border-top: 1px solid #CBCBCB;
+            padding-top: 10px;
+            display: flex;
+            position: relative;
+            text-decoration: none;
+            height: 250px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                max-height: 250px;
+            }
+        }
+        .wc-block-components-product-title {
+            min-height: 60px !important;
+            padding-top: 15px !important;
+            border-top: none !important;
+            a {
+                margin: 0 auto;
+                padding: 0 3px;
+            }
+        }
+        .wc-block-components-product-rating {
+            display: none !important;
+        }
+        .wc-block-components-product-button {
+            border-bottom: 1px solid #CBCBCB;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            .wp-block-button__link {
+                padding: 7px 10px !important;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.woocommerce-page.woocommerce-account {
+    .title-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 1em;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-bottom: 50px;
+        #featured-image {
+            width: 100px;
+            height: 100px;
+            margin: 0;
+            img {
+                border-radius: 50%;
+            }
+        }
+        h1 {
+            margin: 0 0 10px 0;
+        }
+    }
+    .woocommerce-MyAccount {
+        &-navigation {
+            padding: 2rem 1rem;
+            li {
+                text-indent: unset;
+                padding-left: 0;
+                &:before {
+                    display: none;
+                }
+                a {
+                    text-decoration: none;
+                }
+                &.is-active {
+                    a {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        &-downloads-file.button {
+            color: $altpink !important;
+            &::after {
+                color: $white !important;
+            }
+        }
+        &-content {
+            h2:first-of-type {
+                margin-top: 0;
+            }
+            #user-profile-pic {
+                width: -webkit-fill-available;
+                width: -moz-fill-available;
+            }
+            fieldset {
+                padding: 0.35em 0 0.625em;
+            }
+        }
+    }
+    .courses-product {
+        &:before {
+            @media screen and (max-width: $screen-sm) {
+                content: "Product:" !important;
+            }
+        }
+    }
+    .courses-view {
+        &:before {
+            @media screen and (max-width: $screen-sm) {
+                content: "Actions:" !important;
+            }
+        }
+    }
+}

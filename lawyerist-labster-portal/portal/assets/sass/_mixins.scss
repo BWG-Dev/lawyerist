@@ -1,0 +1,29 @@
+@mixin pink-arrow {
+    content: '\e904';
+    font-family: $icomoon;
+    color: $pink;
+    margin-right: 12px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+@mixin arrow-list {
+    font-family: $courier;
+    font-weight: $light;
+    color: $black;
+    background: $white;
+    border-bottom: $ltgrey 2px solid;
+    transition: $trans;
+    &:hover {
+        font-weight: $medium;
+        color: $black;   
+    }
+    &::before {
+        content: '\e904';
+        display: inline-block;
+        font-family: $icomoon;
+        font-size: 12px;
+        color: $pink;
+        margin-right: 12px;
+    }
+}

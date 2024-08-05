@@ -1,0 +1,202 @@
+/**
+ * Sass variables and functions.
+ *
+ * @package lawyerist-wp
+ * @author Postali LLC
+ */
+
+// Breakpoints
+$screen-xxl: 1660px;
+$screen-xl: 1400px;
+$screen-md-xl: 1360px;
+$screen-lg: 1200px;
+$screen-mdlg: 1024px;
+$screen-md: 992px;
+$screen-smmd: 860px;
+$screen-sm: 768px;
+$screen-xs: 667px;
+$screen-xxs: 480px;
+$screen-xxxs: 360px;
+$screen-4xs: 330px;
+
+// Containers
+$container-max-width: $screen-xxl;
+$container-padding:30px;
+
+// Transitions
+$transition-speed:.3s;
+$transition-fast:.3s ease-in-ease-out;
+$transition-slow:.5s ease-in-ease-out;
+
+// Core Colors
+$white: #FFFFFF;
+$offwhite: #ededed;
+$ltgrey: #D9D9D9;
+$grey: #D6D6D6;
+$navgrey: #515A64;
+$dkgrey: #52616A;
+$darkergrey: #333B43;
+$black: #424B54;
+$pink: #ff7062;
+$blue: #81A2AA;
+$dkblue: #88a2aa;
+$green: #86BA90;
+$yellow: #FFE156;
+$ltgreen: #BEFFC7;
+
+$greyborder: 2px solid #e3e3e3;
+// Link Attributes
+// $link-color: $lt-red;
+// $link-hover-color: $grey;
+$link-transition-speed: .15s;
+$trans: 0.3s linear;
+
+// Typography
+//$FONTFAMILY: 'FONTFAMILY', sans-serif;
+$icomoon: 'Icomoon';
+$courier: 'courier-prime', monospace;
+$sans: 'sweet-sans-pro', sans-serif;
+
+
+// $body-font-family: $overpass;
+// $body-text-color: $dk-blue;
+$body-line-height: 130%;
+
+// Font Weight
+$hairline: 200;
+$thin: 300;
+$light: 500;
+$normal: 600;
+$medium: 700;
+$bold: 800;
+$heavy: 900;
+
+// Presets
+$txt-white:   #FFFFFF;
+$txt-black:   #424B54;
+$txt-orange:  #FF7062;
+$border-grey: #CBCBCB;
+
+// Design Width Content Container
+$r-screen-xl:   1364px;
+
+// Content Sizes
+$content-100:   100%;
+$content-75:    75%;
+$content-50:    50%;
+$content-25:    25%;
+
+// Font Sizes
+$font-small:    1.2rem;  // 12px
+$font-small-md: 1.5rem;  // 14px
+$font-small-lg: 0.938rem;// 15px
+$font-normal:   1.063rem;// 17px
+$font-normal-md:1.5rem;  // 24px
+$font-normal-lg:2rem;    // 32px
+$font-h1:       2.375rem;// 38px
+$font-count:    9.375rem;// 150px
+
+// Spacing
+$p-left-sm:     .5rem;
+$p-right-sm:    .5rem;
+$p-left:        2.5rem;
+$p-right:       2.5rem;
+$p-left-mid:    6.5rem;
+$p-right-mid:   6.5rem;
+$p-left-lg:     6.5rem;
+$p-right-lr:    6.5rem;
+$p-top:         2.5rem;
+$m-bottom:      2.5em;
+$m-bottom-lg:   9rem;
+$m-bottom-lg-xl:30rem;
+$p-around:      2.5rem;
+
+// Breakpoints
+$r-screen-xx-lg:1950px;
+$r-screen-x-lg: 1450px;
+$r-screen-lg:   1365px;
+$r-screen-mx-lg:1200px;
+$r-screen-sm-lg:1024px;
+$r-screen-md-lg:965px;
+$r-screen-md:   850px;
+$r-screen-x-sm: 790px;
+$r-screen-md-sm:752px;
+$r-screen-xs:   640px;
+$r-screen-md-xs:500px;
+$r-screen-xxs:  460px;
+
+// Predefined classes
+.txt-black  { color: $txt-white;  }
+.txt-white  { color: $txt-black;  }
+.txt-orange { color: $txt-orange; }
+.m-btm      { margin-bottom: $m-bottom}
+.reviews_navbar-fixed-top {position:fixed !important;top:0px;left:0;width:100%;z-index:99;}
+.visible {opacity:1 !important;}
+.page-id-301729,
+.page-id-138046 { #footer { margin-top:0;}}
+button.tablinks.clickme.active.radio-b,
+button.tablinks {padding: 0 1em 0 1.4em !important;}
+
+.anchor {
+    &.spacer-60,
+    &.spacer-90 {
+        @media screen and (max-width: $screen-sm) {
+            height: 30px;
+        }
+    }
+}
+
+.spacer-10 {
+    height: 10px;
+    display: block;
+}
+.spacer-30 {
+    height: 30px;
+    display: block;
+}
+.spacer-60 {
+    height: 60px;
+}
+.spacer-90 {
+    height: 90px;
+}
+.spacer-60
+.spacer-90 {
+    display: block;
+    @media screen and (max-width: $screen-sm) {
+        height: 30px;
+    }
+}
+
+// Fade in animation
+.fade-in-image {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}

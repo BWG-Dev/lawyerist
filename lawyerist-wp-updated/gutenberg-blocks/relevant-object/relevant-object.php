@@ -1,0 +1,1 @@
+<?php get_template_part('blocks/block', 'relevant-object'); ?>

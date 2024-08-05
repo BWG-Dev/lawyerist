@@ -1,0 +1,183 @@
+/**
+ * Footer Styles.
+ *
+ * @package lawyerist-wp-child
+ * @author Postali LLC
+ */
+
+    
+#footer {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 100px 0;
+        &_subhead {
+            display: block;
+            font-family: $courier;
+            margin: 0 auto;
+            text-align: center;
+            color: $white;
+            font-size: 24px;
+            font-weight: $light;
+            @media screen and (max-width: $screen-md) {
+                width: 80%;
+            }
+        }
+        &_head {
+            display: block;
+            text-align: center;
+            @media screen and (max-width: $screen-xs) {
+                padding-top: 2rem;
+            }
+            a {
+                font-size: 7.2rem;
+                font-family: $sans;
+                font-weight: $medium;
+                text-align: center;
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    color: $white;
+                    text-decoration: underline;
+                }
+                @media screen and (max-width: $screen-mdlg) {
+                    font-size: 8rem;
+                    line-height: 7rem;
+                }
+                @media screen and (max-width: $screen-xs) {
+                    font-size: 5rem;
+                    line-height: 5.5rem;
+                }
+            }
+            &::before {
+                @include pink-arrow; 
+                font-size: 5rem;
+                margin-right: 24px; 
+                @media screen and (max-width: $screen-xs) {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    &_social {
+        margin: 0 auto;
+        padding: 30px 0 20px;
+        .social-icon {
+            display: inline-block;
+            height: max-content;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0 5px;
+            a {
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: none !important;
+                }
+            }
+            &_facebook {
+                &::before {
+                    content: '\e90b';
+                    font-family: $icomoon;
+                    font-size: 4rem;
+                    color: $dkblue;
+                }
+            }
+            &_twitter {
+                &::before {
+                    content: '\e913';
+                    font-family: $icomoon;
+                    font-size: 4rem;
+                    color: $dkblue;
+                }
+            }
+            &_linkedin {
+                &::before {
+                    content: '\e912';
+                    font-family: $icomoon;
+                    font-size: 4rem;
+                    color: $dkblue;
+                }
+            }
+        }
+    }
+    &_info {
+        width: 70%;
+        p {
+            margin-bottom: 15px;
+            font-family: $sans;
+            font-weight: $light;
+            font-size: 16px;
+            line-height: 22px;
+            color: $white;
+            opacity: .51;
+            text-align: center;
+            a {
+                color: $white;
+                opacity: 1;
+                &:hover {
+                    color: $pink;
+                }
+            }
+            &:last-of-type {
+                padding-top: 20px;
+            }
+        }
+    }
+    .menu-footer-menu-container {
+        list-style: none;
+        margin: 60px 0 0;
+        padding: 30px 0;
+        width: 100%;
+        border-top: rgba(255, 255, 255, .24) 1px solid;
+        border-bottom: rgba(255, 255, 255, .24) 1px solid;
+        #menu-footer-menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0 auto;
+            width: 70%;
+            @media screen and (max-width: $screen-mdlg) {
+                width: 80%;
+                flex-wrap: wrap;
+            }
+            .menu-item {
+                display: block;
+                margin: 0;
+                &::before {
+                    @include pink-arrow;
+                    font-size: 1.3rem;
+                    position: relative;
+                    top: 2px;
+                }
+                &:first-child {
+                    margin-top: 0;
+                }
+                @media screen and (max-width: $screen-mdlg) {
+                    margin-top: 0;
+                    padding: 10px 5px;
+                    flex-basis: 30%;
+                }
+                @media screen and (max-width: $screen-xxs) {
+                    flex-basis: 100%;
+                }
+                a {
+                    color: $white;
+                    font-family: $sans;
+                    font-size: 18px;
+                    line-height: 32px;
+                    font-weight: $light;
+                    text-decoration: none !important;
+                    &:hover {
+                        color: $pink;
+                        cursor: pointer;
+                        text-decoration: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+}

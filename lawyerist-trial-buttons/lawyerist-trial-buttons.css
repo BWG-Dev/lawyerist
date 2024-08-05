@@ -1,0 +1,145 @@
+#acf-group_5ae892e2546b9 > .inside {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#acf-group_5ae892e2546b9 .acf-fields.-left > .acf-tab-wrap .acf-tab-group {
+    padding-left: 30px;
+}
+
+#tb-report-loading {
+    clear: both;
+    padding: 1em 0 0;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+#tb-report-loading span::before {
+    display: inline-block;
+    content: '';
+    margin: 0 5px 2px 0;
+    width: 12px;
+    height: 12px;
+    border: 3px solid;
+    border-top-color: #888;
+    border-right-color: #c00;
+    border-bottom-color: #888;
+    border-left-color: #c00;
+    border-radius: 50%;
+    vertical-align: middle;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#tb-click-stats #tb-report-loading {
+    text-align: left;
+}
+
+#tb-report {
+    clear: both;
+    padding: 1em 0;
+    overflow: scroll;
+}
+
+@media only screen and (min-width: 768px) {
+    #tb-report {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+#tb-report table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tb-report tr {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+#tb-report tr.totals {
+    border-bottom: none;
+}
+
+#tb-report th,
+#tb-report td {
+    padding: 5px 8px;
+}
+
+#tb-report th span {
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#tb-report th span:hover {
+    color: #c00;
+}
+
+#tb-report th.sort span:after {
+    display: inline-block;
+    content: '';
+    padding-left: 2px;
+    color: #888;
+}
+
+#tb-report th.sort.asc span:after {
+    content: '\2193';
+}
+
+#tb-report th.sort.desc span:after {
+    content: '\2191';
+}
+
+#tb-report .title {
+    padding-left: 0;
+}
+
+#tb-report .all {
+    padding-right: 0;
+}
+
+#tb-report th {
+    text-align: left;
+}
+
+#tb-report .limit,
+#tb-report .curr,
+#tb-report .prev,
+#tb-report .all {
+    text-align: center;
+}
+
+#tb-report tr.totals td.type {
+    text-align: right;
+}
+
+#tb-report td.curr span,
+#tb-report td.prev span,
+#tb-report td.all span {
+    white-space: nowrap;
+}
+
+#tb-report .ok {
+    color: #090;
+}
+
+#tb-report .warn {
+    color: #c00;
+}
+
+#tb-report .minor {
+    color: #999;
+}
+
+#tb-report p.msg {
+    margin-top: 2em;
+    font-style: italic;
+}
+
+#tb-report p.msg.no-results {
+    text-align: center;
+}

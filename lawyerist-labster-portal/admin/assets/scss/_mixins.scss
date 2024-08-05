@@ -1,0 +1,8 @@
+@mixin pink-arrow {
+    content: '\e904';
+    font-family: $icomoon;
+    color: $pink;
+    margin-right: 12px;
+    display: inline-block;
+    text-decoration: none;
+}
